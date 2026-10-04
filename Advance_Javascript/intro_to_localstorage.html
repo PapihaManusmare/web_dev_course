@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LocalStorage</title>
 </head>
+
 <body>
     <div class="container">
         I am a container
         <form action="">
             <input id="name" type="text" value="">
             <input id="submit" type="submit" value="Submit">
+            <!-- <input onclick="get()" type="submit" value="Submit"> -->
+
         </form>
 
     </div>
@@ -23,11 +27,15 @@
         }
         document.getElementsByTagName("form")[0].addEventListener("submit", (e)=>{
             e.preventDefault()
+
+        const get = () => {
             const value = document.getElementById("name").value;
             localStorage.setItem("name", value)
-        })
-      
+        }
+        // )
+
 
     </script>
 </body>
+
 </html>
